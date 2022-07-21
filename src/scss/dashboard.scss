@@ -1,0 +1,136 @@
+.common-dashboard {
+	.search-box-container {
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 3rem;
+
+		&.search-results {
+			margin-top: 0 !important;
+		}
+
+		.search-box-heading {
+			text-align: center;
+
+			.search-box-heading-title {
+				display: inline-block;
+				border: 3px solid #000;
+
+				font-size: 1.5rem;
+				font-weight: bold;
+
+				.search-box-heading-cid {
+					display: inline-block;
+					color: #fff;
+					background-color: #000;
+					padding: .25rem 1rem;
+					min-width: 5rem;
+					text-transform: uppercase;
+				}
+				.search-box-heading-place {
+					display: inline-block;
+					color: #000;
+					background-color: #fff;
+					padding: .25rem 1rem;
+					min-width: 5rem;
+					text-transform: capitalize;
+				}
+			}
+		}
+		.search-box {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+
+			max-width: 65%;
+			margin: 1rem auto;
+
+			.search-box-input {
+				flex-grow: 1;
+
+				input {
+					width: 95%;
+					font-size: 1.1rem;
+					outline: none;
+					padding: .5rem;
+				}
+			}
+			.search-box-button {
+				color: #fff;
+				background-color: #0057e7;
+				padding: .5rem 1rem;
+				font-size: 1rem;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.results-box-container {
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 3rem;
+
+		&.search-results {
+			margin-top: 0 !important;
+		}
+
+		.results-title {
+			font-weight: bold;
+			text-transform: capitalize;
+		}
+
+		.hr {
+			border-bottom: 1px solid #ccc;
+			margin: 1rem auto;
+			max-width: 20rem;
+		}
+	}
+
+	.loader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, .75);
+
+		@keyframes p-progress-spinner-color {
+			100%,
+			0% {
+				stroke: #d62d20;
+			}
+			40% {
+				stroke: #0057e7;
+			}
+			66% {
+				stroke: #008744;
+			}
+			80%,
+			90% {
+				stroke: #ffa700;
+			}
+		}
+
+		text-align: center;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+	
+	}
+
+	@media (max-width: 1024px) {
+	}
+
+	@media (max-aspect-ratio: 13/9) and (orientation: portrait), (max-width: 800px) {
+	}
+}
+
+.common-dashboard-light {
+	@extend .common-dashboard !optional;
+}
